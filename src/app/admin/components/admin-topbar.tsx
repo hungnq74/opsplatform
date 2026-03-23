@@ -21,13 +21,13 @@ export function AdminTopBar() {
     routeTitles['/admin']
 
   return (
-    <header className="sticky top-0 z-20 flex h-16 items-center px-8 bg-white/80 backdrop-blur-xl border-b border-[#e2e8f0]/60">
+    <header className="sticky top-0 z-20 flex h-[57px] items-center px-7 bg-white border-b border-[#e2e8f0]">
       <div className="flex-1">
-        <h1 className="text-lg font-semibold text-[#0f172a] tracking-tight">
+        <h1 className="text-[15px] font-semibold text-[#0f172a] leading-tight">
           {matchedRoute.title}
         </h1>
         {matchedRoute.subtitle && (
-          <p className="text-[13px] text-[#94a3b8] mt-0.5">
+          <p className="text-[12px] text-[#94a3b8] mt-0.5 leading-tight">
             {matchedRoute.subtitle}
           </p>
         )}

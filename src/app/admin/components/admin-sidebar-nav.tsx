@@ -21,21 +21,24 @@ export function AdminSidebarNav() {
   }
 
   return (
-    <nav className="flex-1 overflow-auto px-3 py-4 space-y-1">
+    <nav className="flex-1 overflow-auto px-2 py-3 space-y-0.5">
       {navItems.map((item) => {
         const active = isActive(item.href, item.exact)
         return (
           <Link
             key={item.href}
             href={item.href}
-            className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-medium transition-all duration-200 ${
+            className={`group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-medium transition-all duration-150 ${
               active
-                ? 'bg-[#eff6ff] text-[#1e3a5f]'
-                : 'text-[#64748b] hover:bg-[#f8fafc] hover:text-[#334155]'
+                ? 'bg-white/[0.1] text-white'
+                : 'text-[#8b9eb7] hover:bg-white/[0.06] hover:text-white'
             }`}
           >
-            <item.icon className={`h-[18px] w-[18px] transition-colors duration-200 ${
-              active ? 'text-[#2563eb]' : 'text-[#94a3b8] group-hover:text-[#64748b]'
+            {active && (
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-[3px] rounded-full bg-[#3b82f6]" />
+            )}
+            <item.icon className={`h-4 w-4 shrink-0 transition-colors duration-150 ${
+              active ? 'text-[#60a5fa]' : 'text-[#4e6680] group-hover:text-[#8b9eb7]'
             }`} />
             {item.label}
           </Link>
@@ -52,14 +55,17 @@ export function AdminSettingsNav() {
   return (
     <Link
       href="/admin/settings"
-      className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-medium transition-all duration-200 ${
+      className={`group relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-medium transition-all duration-150 ${
         active
-          ? 'bg-[#eff6ff] text-[#1e3a5f]'
-          : 'text-[#64748b] hover:bg-[#f8fafc] hover:text-[#334155]'
+          ? 'bg-white/[0.1] text-white'
+          : 'text-[#8b9eb7] hover:bg-white/[0.06] hover:text-white'
       }`}
     >
-      <Settings className={`h-[18px] w-[18px] transition-colors duration-200 ${
-        active ? 'text-[#2563eb]' : 'text-[#94a3b8] group-hover:text-[#64748b]'
+      {active && (
+        <span className="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-[3px] rounded-full bg-[#3b82f6]" />
+      )}
+      <Settings className={`h-4 w-4 shrink-0 transition-colors duration-150 ${
+        active ? 'text-[#60a5fa]' : 'text-[#4e6680] group-hover:text-[#8b9eb7]'
       }`} />
       Cài đặt
     </Link>

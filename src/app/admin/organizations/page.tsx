@@ -13,12 +13,12 @@ export default async function OrganizationsPage() {
     .order('created_at', { ascending: false })
 
   return (
-    <div className="flex flex-col gap-[18px]">
+    <div className="flex flex-col gap-5">
       <div className="flex items-center justify-end">
         <SetupOrganizationDialog />
       </div>
 
-      <div className="overflow-hidden rounded-[10px] bg-white" style={{ border: '1px solid #dde3ea' }}>
+      <div className="overflow-hidden rounded-xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] ring-1 ring-black/[0.05]">
         <OrganizationTable data={organizations || []} />
       </div>
     </div>

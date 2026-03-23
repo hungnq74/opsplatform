@@ -50,7 +50,7 @@ export default async function SubmitFormPage({ params }: { params: { id: string 
           <h3 className="text-[16px] font-bold text-[#1c2b3a] mb-2">Đơn vị của bạn đã nộp báo cáo này</h3>
           <p className="text-[12px] text-[#5a7085] mb-8 max-w-md mx-auto">Dữ liệu đã được ghi nhận an toàn trên hệ thống. Bạn có thể xem lại trong thẻ Lịch sử.</p>
           <Link href="/portal/history">
-            <button className="px-6 py-3 bg-[var(--color-navy)] hover:bg-[var(--color-navy-hover)] text-white rounded-[6px] text-[13px] font-semibold transition-colors duration-150">
+            <button className="px-6 py-3 bg-[#2563eb] hover:bg-[#1d4ed8] text-white rounded-[6px] text-[13px] font-semibold transition-colors duration-150">
               Xem lại dữ liệu đã gửi
             </button>
           </Link>

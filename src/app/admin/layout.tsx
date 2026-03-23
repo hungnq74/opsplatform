@@ -25,16 +25,16 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const initial = profile?.full_name?.charAt(0)?.toUpperCase() || 'A'
 
   return (
-    <div className="flex min-h-screen w-full bg-[#f8fafc]">
-      {/* Sidebar — 240px */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col border-r border-[#e2e8f0] bg-white sm:flex">
+    <div className="flex min-h-screen w-full bg-[#f1f5f9]">
+      {/* Sidebar — 240px dark */}
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col bg-[#0f172a] sm:flex">
         {/* Logo */}
-        <div className="flex items-center gap-3 px-5 h-16 border-b border-[#e2e8f0]">
-          <Link href="/admin" className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1e3a5f] shadow-sm">
-              <Building2 className="h-4 w-4 text-white" />
+        <div className="flex items-center gap-3 px-4 h-[57px] border-b border-white/[0.07]">
+          <Link href="/admin" className="flex items-center gap-2.5">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#2563eb]">
+              <Building2 className="h-3.5 w-3.5 text-white" />
             </div>
-            <span className="text-[15px] font-bold text-[#0f172a] tracking-tight">Ops Platform</span>
+            <span className="text-[14px] font-semibold text-white tracking-tight">Ops Platform</span>
           </Link>
         </div>
 
@@ -42,19 +42,19 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <AdminSidebarNav />
 
         {/* Footer */}
-        <div className="border-t border-[#e2e8f0] p-3">
+        <div className="border-t border-white/[0.07] px-2 py-3 space-y-0.5">
           <AdminSettingsNav />
           {/* User row */}
-          <div className="flex items-center gap-3 rounded-lg px-3 py-2.5 mt-1">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] text-white text-xs font-semibold shadow-sm">
+          <div className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 mt-1">
+            <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8] text-white text-xs font-semibold">
               {initial}
             </div>
             <div className="flex-1 min-w-0">
-              <div className="text-[13px] font-medium text-[#0f172a] truncate">
+              <div className="text-[12px] font-medium text-[#e2e8f0] truncate leading-tight">
                 {profile?.full_name || 'Admin'}
               </div>
               <form action={handleLogout}>
-                <button type="submit" className="text-xs text-[#94a3b8] hover:text-[#ef4444] transition-colors cursor-pointer">
+                <button type="submit" className="text-[11px] text-[#4e6680] hover:text-[#f87171] transition-colors cursor-pointer leading-tight mt-0.5">
                   Đăng xuất
                 </button>
               </form>
@@ -69,7 +69,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <AdminTopBar />
 
         {/* Content */}
-        <main className="flex-1 px-8 py-6">
+        <main className="flex-1 px-7 py-6">
           {children}
         </main>
       </div>

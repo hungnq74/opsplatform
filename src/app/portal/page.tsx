@@ -35,8 +35,8 @@ export default async function PortalDashboard() {
             <Card key={form.id} className="flex flex-col hover:border-primary/30 transition-colors duration-150">
               <CardHeader className="border-b-0 pb-0">
                 <div className="flex items-start justify-between">
-                  <div className="p-2 bg-[var(--color-navy-light)] rounded-lg">
-                    <FileEdit className="h-6 w-6 text-[var(--color-navy)]" />
+                  <div className="p-2 bg-[#eff6ff] rounded-lg">
+                    <FileEdit className="h-6 w-6 text-[#2563eb]" />
                   </div>
                   <Badge variant="success">Sẵn sàng</Badge>
                 </div>
